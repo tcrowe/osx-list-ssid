@@ -3,6 +3,8 @@
 
 Get a list of SSIDs that your Mac knows. If it's helpful for you please ⭐️.
 
+`npm install osx-list-ssid`
+
 ```js
 const osxListSsid = require("osx-list-ssid");
 
