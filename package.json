@@ -1,0 +1,47 @@
+{
+  "name": "osx-list-ssid",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Tony Crowe <npm@tonycrowe.com> (https://github.com/tcrowe)",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/tcrowe/osx-list-ssid#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tcrowe/osx-list-ssid.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/tcrowe/osx-list-ssid/issues"
+  },
+  "main": "dist/index.js",
+  "bin": {
+    "osx-list-ssid": "dist/cli.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.3",
+    "opti-node-watch": "^0.2.0",
+    "prettier": "^1.15.2",
+    "should": "^13.2.3"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev-cli-mode": "chmod +x src/cli.js",
+    "dev-babel": "opti-node-watch -d 500 -w src --exec 'babel -d dist src/**/*.js'",
+    "dev-eslint": "opti-node-watch -d 1000 -w src -w test --exec 'eslint --cache --fix --format unix src test'",
+    "dev-mocha": "opti-node-watch -d 2000 -w src -w test --exec 'mocha'",
+    "dev-app": "opti-node-watch -d 3000 -w src --script dist/index.js",
+    "dev": "run-p dev-*",
+    "test": "mocha",
+    "prd-babel": "babel -d dist src/**/*.js",
+    "prd-eslint": "eslint --format unix src",
+    "prd": "run-s clean prd-* test"
+  }
+}
