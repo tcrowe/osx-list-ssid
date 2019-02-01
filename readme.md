@@ -32,9 +32,9 @@ osx-list-ssid --format sql # single quote lines
 osx-list-ssid --format json # json
 ```
 
-It looked around for some other modules that do this simple thing but it was not immediately obvious. If you know other modules send me a link or a PR and I will include it here.
+## Resources
 
-## How is it done?
+It looked around for some other modules that do this simple thing but it was not immediately obvious. If you know other modules send me a link or a PR and I will include it here.
 
 I read this article which talks about some ways to get the SSID.
 
