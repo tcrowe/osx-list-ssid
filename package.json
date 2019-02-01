@@ -17,7 +17,9 @@
   "bin": {
     "osx-list-ssid": "dist/cli.js"
   },
-  "os": ["darwin"],
+  "os": [
+    "darwin"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
@@ -44,5 +46,8 @@
     "prd-babel": "babel -d dist src/**/*.js",
     "prd-eslint": "eslint --format unix src",
     "prd": "run-s clean prd-* test"
+  },
+  "dependencies": {
+    "getopts": "^2.2.3"
   }
 }

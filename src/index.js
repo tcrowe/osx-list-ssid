@@ -12,7 +12,7 @@ function osxListSsid(done) {
       return done(err);
     }
 
-    const list = stdout
+    let list = stdout
       .trim()
       .split(lineBreakPattern)
       .map(item => item.trim())
